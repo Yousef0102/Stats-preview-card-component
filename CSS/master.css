@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,700&family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Very-dark-blue: hsl(233, 47%, 7%);
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  --Soft-violet: hsl(277, 64%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Slightly-transparent2-white: hsla(0, 0%, 100%, 0.6);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Very-dark-blue);
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+/* Start The Design */
+main {
+  padding: 60px 0;
+}
+main .container {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+main .container .info {
+  color: white;
+  background-color: var(--Dark-desaturated-blue);
+  max-width: 500px;
+  border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+}
+main .container .info .text {
+  padding: 25px 50px;
+}
+main .container .info .text h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+main .container .info .text h2 span {
+  color: var(--Soft-violet);
+}
+main .container .info .text p {
+  color: var(--Slightly-transparent-white);
+  line-height: 1.7;
+}
+main .container .info .stats {
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--White);
+  font-weight: bold;
+}
+main .container .info .stats span .title {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--Slightly-transparent2-white);
+  font-weight: normal;
+  margin-top: 5px;
+}
+main .container .image {
+  position: relative;
+}
+main .container .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Soft-violet);
+  opacity: 0.6;
+  filter: brightness(0.8);
+  border-radius: 0 10px 10px 0;
+}
+main .container .image .mob-img {
+  border-radius: 0 10px 10px 0;
+  display: none;
+}
+main .container .image .desk-img {
+  border-radius: 0 10px 10px 0;
+  width: 450px;
+}
+footer {
+  background-color: var(--Dark-desaturated-blue);
+  color: var(--White);
+  width: fit-content;
+  margin: auto;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+footer div {
+  padding: 20px;
+}
+footer div a {
+  text-decoration: none;
+  color: var(--Soft-violet);
+}
+footer div span {
+  color: var(--Soft-violet);
+  cursor: pointer;
+}
+/* End The Design */
+/* Start Media */
+@media (max-width: 862px) {
+  main .container .image .desk-img {
+    width: 400px;
+  }
+  main .container .info {
+    width: 400px;
+  }
+}
+@media (max-width: 375px) {
+  main .container {
+    flex-direction: column-reverse;
+  }
+  main .container .image .desk-img {
+    display: none;
+  }
+  main .container .image .mob-img {
+    width: 350px;
+    display: block;
+  }
+  main .container .image::before {
+    width: 350px;
+  }
+  main .container .info {
+    width: 350px;
+  }
+  main .container .info .text {
+    text-align: center;
+    padding: 25px 48px;
+  }
+  main .container .info .stats {
+    padding: 13px;
+  }
+}
+/* End Media */
